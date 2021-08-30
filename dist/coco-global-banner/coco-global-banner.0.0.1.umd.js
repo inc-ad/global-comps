@@ -300,14 +300,17 @@ function Wrapper(baseComp) {
     }
 }
    
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"169b0628-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./packages/coco-global-banner/comp.vue?vue&type=template&id=7a2e8d4d&
-var compvue_type_template_id_7a2e8d4d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"global-comp"},[_c('a',{attrs:{"href":_vm.obj && _vm.obj.link},on:{"click":_vm.toland}},[_c('img',{staticClass:"global-banner",attrs:{"src":_vm.obj.src,"alt":"图片"}})]),_c('span',{staticClass:"close-icon",on:{"click":_vm.clickHandle}})])}
-var compvue_type_template_id_7a2e8d4d_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"169b0628-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./packages/coco-global-banner/comp.vue?vue&type=template&id=a9e1f756&
+var compvue_type_template_id_a9e1f756_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"global-comp"},[_c('a',{attrs:{"href":_vm.obj && _vm.obj.link},on:{"click":_vm.toland}},[_c('img',{staticClass:"global-banner",attrs:{"src":_vm.obj.src,"alt":"图片"}})]),_c('span',{staticClass:"close-icon",on:{"click":_vm.clickHandle}}),_c('span',{staticClass:"gloabal-common-version"},[_vm._v(" public version is "+_vm._s(_vm.publicVersion)+" ")])])}
+var compvue_type_template_id_a9e1f756_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./packages/coco-global-banner/comp.vue?vue&type=template&id=7a2e8d4d&
+// CONCATENATED MODULE: ./packages/coco-global-banner/comp.vue?vue&type=template&id=a9e1f756&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./packages/coco-global-banner/comp.vue?vue&type=script&lang=js&
+//
+//
+//
 //
 //
 //
@@ -320,21 +323,29 @@ var compvue_type_template_id_7a2e8d4d_staticRenderFns = []
 
 /* harmony default export */ var compvue_type_script_lang_js_ = ({
   name: 'banner',
-  components: {
-  },
+  components: {},
   props: {
     obj: {
       type: Object,
       default: () => {}
+    },
+  },
+  data(){
+    return {
+      publicVersion: ''
     }
   },
-  methods:{
-      clickHandle(){
-          this.$emit('close')
-      },
-      toland(){
-          this.$emit('toland')
-      }
+  methods: {
+    clickHandle() {
+      this.$emit('close')
+    },
+    toland() {
+      this.$emit('toland')
+    }
+  },
+  created() {
+    console.log('window.common',window.common)
+    this.publicVersion = window.common && window.common.Gdata.version;
   }
 });
 
@@ -454,8 +465,8 @@ function normalizeComponent (
 
 var component = normalizeComponent(
   coco_global_banner_compvue_type_script_lang_js_,
-  compvue_type_template_id_7a2e8d4d_render,
-  compvue_type_template_id_7a2e8d4d_staticRenderFns,
+  compvue_type_template_id_a9e1f756_render,
+  compvue_type_template_id_a9e1f756_staticRenderFns,
   false,
   null,
   null,
